@@ -7,8 +7,8 @@ Pseudo-code to LaTeX code
 - `sum` : $\sum$
 - `prod` : $\prod$
 - `lim` : $\lim$
-- `<=` : $\leq$ 
-- `>=` : $\geq$
+- `<=` : $\leqslant$ 
+- `>=` : $\geqslant$
 - `==>` : $\implies$
 - `<==>` : $\iff$
 - `in` : $\in$
