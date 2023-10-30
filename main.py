@@ -7,4 +7,4 @@ while True:
     else:
         fun_args = string.split(',', 1)
         func = getattr(funcs, fun_args[0])
-        func(fun_args[1])
+        print(func(fun_args[1]))
