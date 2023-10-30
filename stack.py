@@ -19,6 +19,6 @@ class Stack:
     def stack_top(self):
         assert not self.is_empty(), 'Empty stack'
         return self.keywords[-1]
-    
+
     def last_index(self):
         return len(self.keywords) - 1
