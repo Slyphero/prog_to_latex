@@ -4,11 +4,10 @@ def frac(frac_input):
     
 def lim(lim_input):
     keywords = lim_input.split(',')
-    match keywords[4]:
-        case "arrow":
-            print(f'{keywords[2]} \\xrightarrow[{keywords[0]} \\to {keywords[1]}]{{}} {keywords[3]}')
-        case "lim":
-            print(f'\\lim_{{{keywords[1]} \\to {keywords[2]}}} {keywords[0]} = {keywords[3]}')
+    if keywords[4] == "arrow":
+        print(f'{keywords[2]} \\xrightarrow[{keywords[0]} \\to {keywords[1]}]{{}} {keywords[3]}')
+    else:
+        print(f'\\lim_{{{keywords[1]} \\to {keywords[2]}}} {keywords[0]} = {keywords[3]}')
 
 def sum(sum_input):
     keywords = sum_input.split(',')
