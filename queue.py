@@ -1,4 +1,4 @@
-class Stack:
+class Queue:
     def __init__(self):
         self.keywords = []
 
@@ -9,13 +9,13 @@ class Stack:
         while self.keywords != []:
             self.keywords.pop()
 
-    def stack(self, element):
-        self.keywords.append(element)
+    def queue(self, element):
+            self.keywords.insert(0, element)
 
-    def unstack(self):
-        assert not self.is_empty(), 'Empty stack'
+    def unqueue(self):
+        assert not self.is_empty(), 'Empty queue'
         return self.keywords.pop()
 
-    def stack_top(self):
-        assert not self.is_empty(), 'Empty stack'
+    def queue_first(self):
+        assert not self.is_empty(), 'Empty queue'
         return self.keywords[-1]

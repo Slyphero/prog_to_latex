@@ -7,6 +7,6 @@ Pseudo-code to LaTeX code
 - `sum`
 - `prod`
 - `lim`
-
+  
 ## Syntax 
 To quit the program, type `quit` and press `Enter`.  
