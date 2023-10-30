@@ -14,11 +14,12 @@ Pseudo-code to LaTeX code
 - `in` : $\in$
 - `subset` : $\subset$
 - `=` : $=$
+- `nN` : $\mathbb{N}$
+- `zZ` : $\mathbb{Z}$
+- `qQ` : $\mathbb{Q}$
 - `rR` : $\mathbb{R}$
 - `cC` : $\mathbb{C}$
-- `zZ` : $\mathbb{Z}$
-- `nN` : $\mathbb{N}$
-- `qQ` : $\mathbb{Q}$
 
 ## Syntax 
 To quit the program, type `quit` and press `Enter`.  
+
