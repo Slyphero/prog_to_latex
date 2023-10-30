@@ -14,6 +14,10 @@ Pseudo-code to LaTeX code
 - `in` : $\in$
 - `inc` : $\subset$
 - `=` : $=$
+- `+` : $+$
+- `-` : $-$
+- `*` : $\cdot$
+- `/` : $/$
 - `nN` : $\mathbb{N}$
 - `zZ` : $\mathbb{Z}$
 - `qQ` : $\mathbb{Q}$
