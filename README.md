@@ -12,7 +12,7 @@ Pseudo-code to LaTeX code
 - `==>` : $\implies$
 - `<==>` : $\iff$
 - `in` : $\in$
-- `subset` : $\subset$
+- `inc` : $\subset$
 - `=` : $=$
 - `nN` : $\mathbb{N}$
 - `zZ` : $\mathbb{Z}$
