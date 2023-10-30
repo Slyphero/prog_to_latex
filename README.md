@@ -2,7 +2,7 @@
 Pseudo-code to LaTeX code
 
 ## Operators
-- `frac` : $\frac{...}{...}$
+- `frac` : $/$
 - `int` : $\int$
 - `sum` : $\sum$
 - `prod` : $\prod$
