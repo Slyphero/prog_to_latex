@@ -13,3 +13,7 @@ def lim(lim_input):
 def sum(sum_input):
     keywords = sum_input.split(',')
     print(f'\\sum_{{{keywords[0]}}}^{{{keywords[1]}}} {keywords[2]} = {keywords[3]}')
+
+def prod(prod_input):
+    keywords = prod_input.split(',')
+    print(f'\\prod_{{{keywords[0]}}}^{{{keywords[1]}}} {keywords[2]} = {keywords[3]}')
