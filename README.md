@@ -23,6 +23,9 @@ Pseudo-code to LaTeX code
 - `qQ` : $\mathbb{Q}$
 - `rR` : $\mathbb{R}$
 - `cC` : $\mathbb{C}$
+- `forall` : $\forall$
+- `exists` : $\exists$
+- `exists!` : $\exists !$
 
 ## Syntax 
 To quit the program, type `quit` and press `Enter`.  
