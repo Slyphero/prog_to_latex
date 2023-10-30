@@ -1,3 +1,3 @@
 import pytest
-import funcs
+import operators
 
