@@ -1,3 +1,6 @@
+import sys
+sys.path.append("/media/slyphero/externalDisk/perso/GithubPerso/prog_to_latex")
+
 import pytest
 import operators
 
@@ -13,3 +16,4 @@ def test_frac3():
 
 def test_frac4():
     assert operators.frac(['(a + b)', 'c']) == '\\frac{(a + b)}{c}'
+

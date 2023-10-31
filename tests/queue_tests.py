@@ -1,3 +1,6 @@
+import sys
+sys.path.append("/media/slyphero/externalDisk/perso/GithubPerso/prog_to_latex")
+
 import queue
 import pytest
 
@@ -27,10 +30,8 @@ queue_test4 = queue.Queue()
 queue_test4.queue(1)
 queue_test4.queue(2)
 
-val2 = queue_test4.queue_first()
-
 def test_queue_first():
-    assert val2 == 1
+    assert queue_test4.queue_first() == 1
 
 queue_test5 = queue.Queue()
 queue_test5.queue(1)

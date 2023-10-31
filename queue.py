@@ -19,3 +19,5 @@ class Queue:
     def queue_first(self):
         assert not self.is_empty(), 'Empty queue'
         return self.keywords[-1]
+
+
