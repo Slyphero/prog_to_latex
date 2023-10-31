@@ -15,7 +15,20 @@ queue_test2.queue(1)
 
 def test_queue_queue():
     assert queue_test2.keywords == [1]
+
+queue_test3 = queue.Queue()
+queue_test3.queue(2)
+
+val1 = queue_test3.unqueue()
+
+def test_unqueue1():
+    assert val1 == 2
+
+def test_unqueue2():
+    assert queue_test3.is_empty()
+
 # ----- Stack tests ----- #
+
 
 # ----- Fractions tests ----- #
 def test_frac1():
