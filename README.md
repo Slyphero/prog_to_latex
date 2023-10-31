@@ -14,11 +14,8 @@ To quit the program, type `quit` and press `Enter`.
 - `<==>` : $P \iff Q$
 - `x in E` : $x \in E$
 - `A inc B` : $A \subset B$
-- `=` : $=$
-- `+` : $+$
-- `-` : $-$
-- `*` : $\cdot$
-- `a/b` : $\frac{a}{b}$
+- `a * b` : $a \cdot b$
+- `a / b` : $\frac{a}{b}$
 - `a^b` : $a^b$
 - `a_b` : $a_b$
 - `nN` : $\mathbb{N}$
