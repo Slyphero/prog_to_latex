@@ -1,22 +1,18 @@
-# For all functions in this file : keywords is a str list
+BINARY_OPERATORS = ['/', '*', '<=', '>=', '==>', '<==>', '!=']
+COMPLEX_OPERATORS = ['lim', 'int', 'sum', 'prod']
+OTHER_OPERATORS = ['in', 'inc', 'nN', 'zZ', 'qQ', 'rR', 'cC', 'forall', 'exists', 'exists!']
 
-def frac(keywords):
-    return f'\\frac{{{keywords[0]}}}{{{keywords[1]}}}'
+def frac(numerator, denominator):
+    return f'\\frac{{{numerator}}}{{{denominator}}}'
 
-def plus(keywords) : 
-    return f'{keywords[0]} + {keywords[1]}'
+def times(a, b):
+    return f'{a} \\cdot {b}'
 
-def minus(keywords):
-    return f'{keywords[0]} - {keywords[1]}'
+def neq(a, b):
+    return f'{a} \\neq {b}'
 
-def times(keywords):
-    return f'{keywords[0]} \\cdot {keywords[1]}'
+def geq(a, b):
+    return f'{a} \\geqslant {b}'
 
-def neq(keywords):
-    return f'{keywords[0]} \\neq {keywords[1]}'
-
-def geq(keywords):
-    return f'{keywords[0]} \\geqslant {keywords[1]}'
-
-def leq(keywords):
-    return f'{keywords[0]} \\leqslant {keywords[1]}'
+def leq(a, b):
+    return f'{a} \\leqslant {b}'
