@@ -10,7 +10,7 @@ def minus(keywords):
     return f'{keywords[0]} - {keywords[1]}'
 
 def times(keywords):
-    return f'{keywords[0]} \cdot {keywords[1]}'
+    return f'{keywords[0]} \\cdot {keywords[1]}'
 
 def neq(keywords):
     return f'{keywords[0]} \\neq {keywords[1]}'

@@ -5,10 +5,16 @@ import queue
 import stack
 
 # ----- Queue tests ----- #
-queue_test = queue.Queue()
-def test_queue_is_empty():
-    assert queue_test.is_empty() == 'True'
+queue_test1 = queue.Queue()
 
+def test_queue_is_empty():
+    assert queue_test1.is_empty()
+
+queue_test2 = queue.Queue()
+queue_test2.queue(1)
+
+def test_queue_queue():
+    assert queue_test2.keywords == [1]
 # ----- Stack tests ----- #
 
 # ----- Fractions tests ----- #
