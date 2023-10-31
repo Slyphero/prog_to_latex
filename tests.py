@@ -27,6 +27,24 @@ def test_unqueue1():
 def test_unqueue2():
     assert queue_test3.is_empty()
 
+queue_test4 = queue.Queue()
+queue_test4.queue(1)
+queue_test4.queue(2)
+
+val2 = queue_test4.queue_first()
+
+def test_queue_first():
+    assert val2 == 1
+
+queue_test5 = queue.Queue()
+queue_test5.queue(1)
+queue_test5.queue(2)
+
+queue_test5.empty()
+
+def test_queue_empty():
+    assert queue_test5.is_empty()
+
 # ----- Stack tests ----- #
 
 
