@@ -17,3 +17,7 @@ def test_frac3():
 def test_frac4():
     assert operators.frac('\\left(a + b\\right)', 'c') == '\\frac{\\left(a + b\\right)}{c}'
 
+# ----- Limits tests ----- #
+def test_limit1():
+    assert operators.lim('f(x)', 'x', 'a') == '\\lim_{x \\to a} f(x)'
+

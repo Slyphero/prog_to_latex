@@ -6,8 +6,7 @@ class Queue:
         return self.keywords == []
 
     def empty(self):
-        while self.keywords != []:
-            self.keywords.pop()
+        self.keywords.clear()
 
     def queue(self, element):
             self.keywords.insert(0, element)

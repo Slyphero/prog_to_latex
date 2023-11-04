@@ -6,8 +6,7 @@ class Stack:
         return self.keywords == []
 
     def empty(self):
-        while self.keywords != []:
-            self.keywords.pop()
+        self.keywords.clear()
 
     def stack(self, element):
         self.keywords.append(element)

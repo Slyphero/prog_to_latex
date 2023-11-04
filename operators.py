@@ -2,6 +2,8 @@ BINARY_OPERATORS = ['/', '*', '<=', '>=', '==>', '<==>', '!=']
 COMPLEX_OPERATORS = ['lim', 'int', 'sum', 'prod']
 OTHER_OPERATORS = ['in', 'inc', 'nN', 'zZ', 'qQ', 'rR', 'cC', 'forall', 'exists', 'exists!']
 
+# Operators arguments are strings
+
 def frac(numerator, denominator):
     return f'\\frac{{{numerator}}}{{{denominator}}}'
 
@@ -16,3 +18,6 @@ def geq(a, b):
 
 def leq(a, b):
     return f'{a} \\leqslant {b}'
+
+def lim(function, variable, variable_limit):
+    return f'\\lim_{{{variable} \\to {variable_limit}}} {function}'
