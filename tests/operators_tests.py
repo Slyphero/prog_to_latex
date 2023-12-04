@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/media/slyphero/externalDisk/perso/GithubPerso/prog_to_latex")
+sys.path.append("/media/raphael/externalDisk/perso/GithubPerso/prog_to_latex")
 
 import pytest
 import operators
