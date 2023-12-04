@@ -19,5 +19,8 @@ def test_frac4():
 
 # ----- Limits tests ----- #
 def test_limit1():
-    assert operators.lim('f(x)', 'x', 'a') == '\\lim_{x \\to a} f(x)'
+    assert operators.lim('x', 'a') == '\\lim_{x \\to a}'
+
+def test_integral1():
+    assert operators.integral('a', 'b') == '\\int_{a}^{b}'
 

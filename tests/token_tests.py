@@ -13,9 +13,12 @@ token_test_brackets4 = string_treatment.Token('[ a + [ b + c ] ] ]')
 token_test_brackets5 = string_treatment.Token('[ a + ( b + c ) ]')
 token_test_brackets6 = string_treatment.Token('[ a + ( b + c ] )')
 
+# Test Constructor
 def test_token_constructor():
     assert token_test.tokens == ['int', 'a', 'b', 'f(x)', 'x']
 
+
+# Test validate_brackets
 def test_validate_brackets1():
     assert token_test_brackets1.verify_brackets() == False
 
