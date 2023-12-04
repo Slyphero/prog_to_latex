@@ -32,4 +32,4 @@ To quit the program, type `quit` and press `Enter`.
 
 If you want to put an expression as a parameter, put it between `[]`.
 
-Example : `int a b [1 / x] x` should give $\int_a^b \frac{1}{x} \ \mathrm{d}x$.  
+Example : `int a b [ 1 / x ] x` should give $\int_a^b \frac{1}{x} \ \mathrm{d}x$.  
