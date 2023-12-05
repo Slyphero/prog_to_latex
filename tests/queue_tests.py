@@ -1,5 +1,6 @@
 import sys
 sys.path.append("/media/raphael/externalDisk/perso/GithubPerso/prog_to_latex")
+sys.path.append("E:\perso\GithubPerso\prog_to_latex")
 
 import queue_class
 import pytest

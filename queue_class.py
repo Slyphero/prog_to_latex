@@ -9,7 +9,7 @@ class Queue:
         self.keywords.clear()
 
     def queue(self, element):
-            self.keywords.insert(0, element)
+        self.keywords.insert(0, element)
 
     def unqueue(self):
         assert not self.is_empty(), 'Empty queue'
