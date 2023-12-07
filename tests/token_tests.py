@@ -1,7 +1,7 @@
 import sys
 sys.path.append("/media/raphael/externalDisk/perso/GithubPerso/prog_to_latex")
-sys.path.append("E:\perso\GithubPerso\prog_to_latex")
-sys.path.append("~/Documents/prog_to_latex")
+# sys.path.append("E:\perso\GithubPerso\prog_to_latex")
+sys.path.append("/home/raphael/Documents/prog_to_latex")
 
 import pytest 
 import string_treatment
@@ -18,7 +18,6 @@ token_test_brackets6 = string_treatment.Token('[ a + ( b + c ] )')
 # Test Constructor
 def test_token_constructor():
     assert token_test.tokens == ['int', 'a', 'b', 'f(x)', 'x']
-
 
 # Test validate_brackets
 def test_validate_brackets1():
@@ -38,3 +37,9 @@ def test_validate_brackets5():
 
 def test_validate_brackets6():
     assert token_test_brackets6.verify_brackets() == False
+
+# Tests infix_to_postfix
+test_infix_to_postfix_tokens1 = string_treatment.Token('[ a / b ]')
+
+def test_infix_to_postfix1():
+    assert string_treatment.infix_to_postfix(test_infix_to_postfix_tokens1) == 'a b / '

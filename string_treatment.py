@@ -65,3 +65,27 @@ class Token:
             return "\\iff"
         if operator == "!=":
             return "\\neq"
+
+    def infix_to_postfix(infix_tokens):
+        postfix = ""
+        operators_stack = stack.Stack()
+        for token in infix_tokens: 
+            if not ((token in operators.BINARY_OPERATORS) or (token in operators.TERNARY_OPERATORS) or (token in operators.OTHER_OPERATORS)):
+                postfix = postfix + token + " "
+            else:
+                if token == '[':
+                    operators_stack.stack(token)
+                elif token == ']':
+                    while operators_stack.stack_top() != '[':
+                        postfix = postfix + operators_stack.stack_top() + " "
+                        operators_stack.unstack()
+                    operators_stack.unstack()
+                
+                else:
+                    while not operators_stack.is_empty():
+                        postfix = postfix + operators_stack.stack_top() + " "
+                        operators_stack.unstack()
+        return postfix
+
+    infix_tokens = ['[', 'a', '/', 'b', ']']
+    print(infix_to_postfix(infix_tokens))
