@@ -5,6 +5,7 @@ sys.path.append("/home/raphael/Documents/prog_to_latex")
 
 import pytest 
 import string_treatment
+import operators
 
 string_input = 'int a b f(x) x'
 token_test = string_treatment.Token(string_input)
@@ -38,8 +39,9 @@ def test_validate_brackets5():
 def test_validate_brackets6():
     assert token_test_brackets6.verify_brackets() == False
 
-# Tests infix_to_postfix
-test_infix_to_postfix_tokens1 = string_treatment.Token('[ a / b ]')
+# Operator conversion tests 
+convert_operators_test = string_treatment.Token('forall x in E')
+convert_operators_test.convert_others_operators()
 
-def test_infix_to_postfix1():
-    assert string_treatment.infix_to_postfix(test_infix_to_postfix_tokens1) == 'a b / '
+def test_convert_operators_test():
+    assert convert_operators_test.tokens == ['\\forall', 'x', '\\in', 'E']

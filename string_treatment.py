@@ -66,26 +66,23 @@ class Token:
         if operator == "!=":
             return "\\neq"
 
-    def infix_to_postfix(infix_tokens):
-        postfix = ""
-        operators_stack = stack.Stack()
-        for token in infix_tokens: 
-            if not ((token in operators.BINARY_OPERATORS) or (token in operators.TERNARY_OPERATORS) or (token in operators.OTHER_OPERATORS)):
-                postfix = postfix + token + " "
-            else:
-                if token == '[':
-                    operators_stack.stack(token)
-                elif token == ']':
-                    while operators_stack.stack_top() != '[':
-                        postfix = postfix + operators_stack.stack_top() + " "
-                        operators_stack.unstack()
-                    operators_stack.unstack()
-                
-                else:
-                    while not operators_stack.is_empty():
-                        postfix = postfix + operators_stack.stack_top() + " "
-                        operators_stack.unstack()
-        return postfix
+    def convert_others_operators(self):
+        length = len(self.tokens)
+        for i in range(length):
+            if self.tokens[i] in operators.OTHER_OPERATORS.keys():
+                self.tokens[i] = operators.OTHER_OPERATORS[self.tokens[i]]
 
-    infix_tokens = ['[', 'a', '/', 'b', ']']
-    print(infix_to_postfix(infix_tokens))
+    def infix_to_postfix(self):
+        operators_stack = stack.Stack()
+        postfix_stack = stack.Stack()
+
+        for token in self.tokens:
+            if token not in operators.OPERATORS:
+                postfix_stack.stack(token)
+            elif token == '[':
+                operators_stack.stack(token)
+
+        while not operators_stack.is_empty():
+            postfix_stack.stack(operators_stack.unstack())
+
+        return postfix_stack

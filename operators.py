@@ -1,6 +1,24 @@
 BINARY_OPERATORS = ['/', 'lim', 'int']
 TERNARY_OPERATORS = ['sum', 'prod']
-OTHER_OPERATORS = ['in', 'inc', 'nN', 'zZ', 'qQ', 'rR', 'cC', 'forall', 'exists', '*', '<=', '>=', '==>', '<==>', '!=',]
+OTHER_OPERATORS = {
+    'in': '\\in', 
+    'inc': '\\subset', 
+    'nN': '\\mathbb{N}', 
+    'zZ': '\\mathbb{Z}', 
+    'qQ': '\\mathbb{Q}', 
+    'rR': '\\mathbb{R}', 
+    'cC': '\\mathbb{C}', 
+    'forall': '\\forall', 
+    'exists': '\\exists', 
+    '*': '\\times', 
+    '<=': '\\leq', 
+    '>=': '\\geq', 
+    '==>': '\\implies', 
+    '<==>': '\\iff', 
+    '!=': '\\neq',
+}
+
+OPERATORS = BINARY_OPERATORS + TERNARY_OPERATORS + list(OTHER_OPERATORS.values())
 
 # Operators arguments are strings
 
