@@ -18,7 +18,9 @@ OTHER_OPERATORS = {
     '!=': '\\neq',
 }
 
-OPERATORS = BINARY_OPERATORS + TERNARY_OPERATORS + list(OTHER_OPERATORS.values())
+OPERATORS = BINARY_OPERATORS + TERNARY_OPERATORS + list(OTHER_OPERATORS.keys())
+
+print(OPERATORS)
 
 # Operators arguments are strings
 

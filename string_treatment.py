@@ -1,4 +1,5 @@
 import stack
+import queue_class 
 import operators
 
 class Token:
@@ -73,16 +74,22 @@ class Token:
                 self.tokens[i] = operators.OTHER_OPERATORS[self.tokens[i]]
 
     def infix_to_postfix(self):
-        operators_stack = stack.Stack()
-        postfix_stack = stack.Stack()
+        operator_stack = stack.Stack()
+        output = queue_class.Queue()
 
         for token in self.tokens:
-            if token not in operators.OPERATORS:
-                postfix_stack.stack(token)
+            if token in operators.OPERATORS:
+                operator_stack.stack(token)
             elif token == '[':
-                operators_stack.stack(token)
+                operator_stack.stack(token)
+            elif token == ']':
+                while operator_stack.stack_top() != '[':
+                    output.queue(operator_stack.unstack())
+                operator_stack.unstack()
+            else:
+                output.queue(token)
+        while not operator_stack.is_empty():
+            output.queue(operator_stack.unstack())
 
-        while not operators_stack.is_empty():
-            postfix_stack.stack(operators_stack.unstack())
-
-        return postfix_stack
+        return list(reversed(output.keywords))
+    

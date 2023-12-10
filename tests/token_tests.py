@@ -45,3 +45,14 @@ convert_operators_test.convert_others_operators()
 
 def test_convert_operators_test():
     assert convert_operators_test.tokens == ['\\forall', 'x', '\\in', 'E']
+
+# Infix to postfix tests
+
+infix_to_postfix_test1 = string_treatment.Token('int a b [ 1 / x ] dx')
+output = infix_to_postfix_test1.infix_to_postfix()
+
+print("Final result: ", output)
+
+def test_infix_to_postfix_test1():
+    assert output == ['a', 'b', '1', 'x', '/', 'dx', 'int']
+
